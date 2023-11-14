@@ -10,7 +10,7 @@ function App() {
       <Tabs defaultValue="article">
       <TabsList>
         <TabsTrigger value="article">Get Artikl By Name</TabsTrigger>
-        <TabsTrigger value="password">Password</TabsTrigger>
+        <TabsTrigger value="payment">Get Transaction By Payment Type</TabsTrigger>
       </TabsList>
       <TabsContent value="article">
         <GetArticleForm></GetArticleForm>
