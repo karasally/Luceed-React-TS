@@ -9,8 +9,8 @@ function App() {
     <div>
       <Tabs defaultValue="article">
       <TabsList>
-        <TabsTrigger value="article">Get Artikl By Name</TabsTrigger>
-        <TabsTrigger value="payment">Get Transaction By Payment Type</TabsTrigger>
+        <TabsTrigger value="article">Traži artikle po imenu</TabsTrigger>
+        <TabsTrigger value="payment">Traži obračune po načinu plaćanja</TabsTrigger>
       </TabsList>
       <TabsContent value="article">
         <GetArticleForm></GetArticleForm>

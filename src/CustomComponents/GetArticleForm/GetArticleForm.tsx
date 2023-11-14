@@ -62,36 +62,7 @@ export const columns: ColumnDef<Article>[] = [
     cell: ({ row }) => (
       <div className="capitalize">{row.getValue("naziv")}</div>
     ),
-  },
-  {
-    id: "actions",
-    enableHiding: false,
-    cell: ({ row }) => {
-      const payment = row.original
-
-      return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <DotsHorizontalIcon className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id.toString())}
-            >
-              Copy payment ID
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      )
-    },
-  },
+  }
 ]
 
 const FormSchema = z.object({
@@ -176,7 +147,7 @@ export function DataTableDemo() {
                 </FormItem>
               )}
             />
-            <Button className="ml-2" type="submit">Trazi</Button>
+            <Button className="ml-2" type="submit">Traži</Button>
           </form>
         </Form>
       </div>
@@ -223,7 +194,7 @@ export function DataTableDemo() {
                   colSpan={columns.length}
                   className="h-24 text-center"
                 >
-                  No results.
+                  Nema rezultata.
                 </TableCell>
               </TableRow>
             )}
@@ -238,7 +209,7 @@ export function DataTableDemo() {
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
-            Previous
+            Prethodna
           </Button>
           <Button
             variant="outline"
@@ -246,7 +217,7 @@ export function DataTableDemo() {
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >
-            Next
+            Sljedeća
           </Button>
         </div>
       </div>
